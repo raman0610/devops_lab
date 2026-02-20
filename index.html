@@ -2,14 +2,76 @@
 <html>
 <head>
   <title>My DevOps Work</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      margin-top: 100px;
+      font-size: 40px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .btn {
+      padding: 20px 40px;
+      font-size: 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: white;
+      transition: 0.3s;
+      font-weight: bold;
+    }
+
+    .lab {
+      background-color: #ff9800;
+    }
+
+    .lectures {
+      background-color: #4caf50;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      opacity: 0.9;
+    }
+
+    footer {
+      margin-top: 120px;
+      font-size: 14px;
+      opacity: 0.7;
+    }
+  </style>
 </head>
+
 <body>
 
-<h1>Welcome to My DevOps Work</h1>
+  <h1>Welcome to My DevOps Work 🚀</h1>
+  <p>Select a section below</p>
 
-<p>Click below to see my Lab</p>
+  <div class="container">
+    <a href="lab/" class="btn lab">📂 Open Lab</a>
+    <a href="lectures/" class="btn lectures">📘 Open Lectures</a>
+  </div>
 
-<a href="lab/">➡ Open Lab</a>
+  <footer>
+    © 2025 Raman Kumar | DevOps Lab Project
+  </footer>
 
 </body>
 </html>
