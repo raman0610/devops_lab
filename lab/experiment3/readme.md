@@ -13,21 +13,21 @@
 ```bash
 docker pull nginx:latest
 ```
-![Pull Image](./Images/1.png)
+![Pull Image](./images/1.png)
 
 
 **Step 2: Run the Container**
 ```bash
 docker run -d --name nginx-official -p 8080:80 nginx
 ```
-![Run Container](./Images/2.png)
+![Run Container](./images/2.png)
 
 
 **Step 3: Verify**
 ```bash
 curl http://localhost:8080
 ```
-![Verify](./Images/3.png)
+![Verify](./images/3.png)
 
 
 You should see the **NGINX welcome page**.
@@ -38,7 +38,7 @@ You should see the **NGINX welcome page**.
 ```bash
 docker images nginx
 ```
-![List Images](./Images/4.png)
+![List Images](./images/4.png)
 
 
 * Image is **pre-optimized**
@@ -74,8 +74,8 @@ CMD ["nginx", "-g", "daemon off;"]
 ```bash
 docker build -t nginx-ubuntu .
 ```
-![Build from Ubuntu Image](./Images/5.png)
-![Build from Ubuntu Image](./Images/6.png)
+![Build from Ubuntu Image](./images/5.png)
+![Build from Ubuntu Image](./images/6.png)
 
 
 **Step 3: Run Container**
@@ -83,7 +83,7 @@ docker build -t nginx-ubuntu .
 ```bash
 docker run -d --name nginx-ubuntu -p 8081:80 nginx-ubuntu
 ```
-![Run Container](./Images/7.png)
+![Run Container](./images/7.png)
 
 
 **Observations**
@@ -91,7 +91,7 @@ docker run -d --name nginx-ubuntu -p 8081:80 nginx-ubuntu
 ```bash
 docker images nginx-ubuntu
 ```
-![List Ubuntu-Images](./Images/8.png)
+![List Ubuntu-Images](./images/8.png)
 
 * Much **larger image size**
 * More layers
@@ -123,14 +123,14 @@ CMD ["nginx", "-g", "daemon off;"]
 ```bash
 docker build -t nginx-alpine .
 ```
-![Build Alpine-Image](./Images/9.png)
+![Build Alpine-Image](./images/9.png)
 
 **Step 3: Run Container**
 
 ```bash
 docker run -d --name nginx-alpine -p 8082:80 nginx-alpine
 ```
-![Run Container](./Images/10.png)
+![Run Container](./images/10.png)
 
 
 **Observations**
@@ -138,7 +138,7 @@ docker run -d --name nginx-alpine -p 8082:80 nginx-alpine
 ```bash
 docker images nginx-alpine
 ```
-![List Alpine-Images](./Images/11.png)
+![List Alpine-Images](./images/11.png)
 
 
 * Extremely **small image**
@@ -161,7 +161,7 @@ docker images nginx-alpine
 ```bash
 docker images | grep nginx
 ```
-![List All nginx Images](./Images/12.png)
+![List All nginx Images](./images/12.png)
 
 
 _Typical result (approx):_
@@ -181,7 +181,7 @@ docker history nginx
 docker history nginx-ubuntu
 docker history nginx-alpine
 ```
-![Inspect](./Images/13.png)
+![Inspect](./images/13.png)
 
 
 **Observations:**
@@ -206,7 +206,7 @@ docker history nginx-alpine
 mkdir html
 echo "<h1>Harshit Kumar - 500122407</h1>" > html/index.html
 ```
-![Serve Custom HTML](./Images/14.png)
+![Serve Custom HTML](./images/14.png)
 
 _Run:_
 
@@ -216,8 +216,8 @@ docker run -d \
   -v $(pwd)/html:/usr/share/nginx/html \
   nginx
 ```
-![Serve Custom HTML](./Images/15.png)
-![Serve Custom HTML](./Images/16.png)
+![Serve Custom HTML](./images/15.png)
+![Serve Custom HTML](./images/16.png)
 
 **Task 2: Reverse Proxy (Conceptual)**
 
