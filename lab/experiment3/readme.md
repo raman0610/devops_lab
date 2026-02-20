@@ -204,7 +204,7 @@ docker history nginx-alpine
 
 ```bash
 mkdir html
-echo "<h1>Harshit Kumar - 500122407</h1>" > html/index.html
+echo "<h1>Raman Kumar - 500120223</h1>" > html/index.html
 ```
 ![Serve Custom HTML](./images/14.png)
 
