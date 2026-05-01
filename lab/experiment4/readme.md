@@ -111,7 +111,7 @@ test_*.py
 docker build -t my-flask-app .
 ```
 
-![Building Flask Docker Image](/screenshots/image4.png)
+![Building Flask Docker Image](./screenshots/image4.png)
 
 ### Step 2: Tagging Images
 ```bash
@@ -120,7 +120,7 @@ docker build -t my-flask-app:latest -t my-flask-app:1.0 .
 docker tag my-flask-app:latest my-flask-app:v1.0
 ```
 
-![Tagging Docker Images](/screenshots/image5.png)
+![Tagging Docker Images](./screenshots/image5.png)
 
 ### Step 3: View Image Details
 ```bash
@@ -129,7 +129,7 @@ docker history my-flask-app
 docker inspect my-flask-app
 ```
 
-![Docker Images, History, and Inspect](/screenshots/image6.png)
+![Docker Images, History, and Inspect](./screenshots/image6.png)
 
 ---
 
@@ -140,7 +140,7 @@ docker inspect my-flask-app
 docker run -d -p 5000:5000 --name flask-container my-flask-app
 ```
 
-![Running Flask Container](/screenshots/image7.png.)
+![Running Flask Container](./screenshots/image7.png)
 
 ### Step 2: Test & Manage Container
 ```bash
@@ -150,7 +150,7 @@ docker ps
 docker logs flask-container
 ```
 
-![Testing Flask Endpoints and Container Status](/screenshots/image8.png)
+![Testing Flask Endpoints and Container Status](./screenshots/image8.png)
 
 ### Step 3: Stop & Remove Container
 ```bash
@@ -207,7 +207,7 @@ docker images | findstr flask-
 | flask-regular | 132MB |
 | flask-multistage | 145MB |
 
-![Multi-stage Build and Size Comparison](/screenshots/image10.png)
+![Multi-stage Build and Size Comparison](./screenshots/image10.png)
 
 > **Note:** The multi-stage build includes a virtual environment and a non-root user for better security practices, which adds slight overhead. The benefit of multi-stage becomes more significant with larger applications that have heavy build dependencies.
 
@@ -283,7 +283,7 @@ docker run -d -p 3000:3000 --name node-container my-node-app
 curl http://localhost:3000
 ```
 
-![Node.js Docker Build, Run, and Curl](/screenshots/image14.png)
+![Node.js Docker Build, Run, and Curl](./screenshots/image14.png)
 
 ### Container Status & Logs
 ```bash
@@ -291,7 +291,7 @@ docker ps
 docker logs node-container
 ```
 
-![Node.js Container Status and Logs](/screenshots/image15.png)
+![Node.js Container Status and Logs](./screenshots/image15.png)
 
 ---
 
@@ -303,7 +303,7 @@ docker build -t myapp:latest -t myapp:v2.0 .
 docker images | findstr myapp
 ```
 
-![Multi-tagging Exercise](/screenshots/image16.png)
+![Multi-tagging Exercise](./screenshots/image16.png)
 
 ### Exercise 3: Clean Build vs Cached Build
 ```bash
@@ -319,7 +319,7 @@ docker build -t cached-app .              # ~0.1s (cached)
 
 > The cached build is significantly faster as Docker reuses unchanged layers.
 
-![Clean Build vs Cached Build](/screenshots/image17.png)
+![Clean Build vs Cached Build](./screenshots/image17.png)
 
 ---
 
@@ -333,7 +333,7 @@ docker image prune
 docker system prune -a
 ```
 
-![Docker Cleanup](/screenshots/image17.png)
+![Docker Cleanup](./screenshots/image17.png)
 
 ---
 
