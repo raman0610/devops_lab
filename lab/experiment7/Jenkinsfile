@@ -14,9 +14,9 @@ pipeline {
       }
     }
 
-    stage('Move to Experiment-7') {
+    stage('Move to experiment7') {
       steps {
-        dir('Cloud Lab/Experiment-7') {
+        dir('lab/experiment7') {
           sh 'ls'
         }
       }
@@ -24,7 +24,7 @@ pipeline {
 
     stage('Build Image') {
       steps {
-        dir('Cloud Lab/Experiment-7') {
+        dir('lab/experiment7') {
           sh 'docker build -t $IMAGE_NAME:latest .'
         }
       }
