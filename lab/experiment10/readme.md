@@ -215,7 +215,7 @@ If you want to remove the container automatically when stopped, add `--rm` to th
 
 *This experiment shows how to incorporate static analysis into a development workflow using SonarQube and Docker.*
 
-**Author:** Arnav  
+**Author:** Raman kumar  
 **Date:** April 25, 2026
 ```
 
